@@ -5,27 +5,45 @@ defineProps({
 </script>
 <template>
   <a>
-    {{ item }}
     <img :src="item.img" alt="" />
-    <h1>{{ item.title }}</h1>
-    <p>{{ item.desc }}</p>
-    <!-- <i v-if="item.like" class="fas fa-star"></i>
-    <i v-else class="far fa-star"></i> -->
-    <i class="fas fa-star" :class="item.like ? 'red' : 'black'"></i>
+    <h1>Модель: {{ item.brand }}</h1>
+    <p>Цена: {{ item.price }}₽</p>
+    <p>Размеры: {{ item.size }}</p>
+    <div>
+      <i class="far fa-star"></i>
+      <p>{{ item.rating }}</p>
+    </div>
   </a>
 </template>
 
 <style scoped>
+div {
+  display: flex;
+  align-items: center;
+}
+img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
 a {
-  width: 500px;
-  padding: 10px;
-  background: #32383e;
+  width: 100%;
+  padding: 30px;
+  background: #696969;
+  font-weight: bold;
+
+
 }
-.red {
-    color: red;
+h1 {
+  font-size: 30px;
+  font-family: 'Andale Mono', monospace;
+  
 }
-.black{
-    color: black;
+p {
+  font-size: 25px;
+  font-family: 'Andale Mono', monospace;
+}
+i {
+  color: yellow;
 }
 </style>
 
