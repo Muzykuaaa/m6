@@ -4,16 +4,17 @@ defineProps({
 });
 </script>
 <template>
-  <a>
+  <router-link :to="{name: 'detail', params: { id: item.id } }">
     <img :src="item.img" alt="" />
     <h1>Модель: {{ item.brand }}</h1>
     <p>Цена: {{ item.price }}₽</p>
     <p>Размеры: {{ item.size }}</p>
+
     <div>
       <i class="far fa-star"></i>
       <p>{{ item.rating }}</p>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <style scoped>
@@ -30,6 +31,8 @@ a {
   padding: 30px;
   background: #696969;
   font-weight: bold;
+  text-decoration: none;
+  color: aliceblue;
 
 
 }
