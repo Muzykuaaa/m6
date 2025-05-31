@@ -5,7 +5,7 @@ defineProps({
 </script>
 <template>
   <router-link :to="{name: 'detail', params: { id: item.id } }">
-    <img :src="item.img" alt="" />
+    <img :src="item.src" alt="" />
     <h1>Модель: {{ item.brand }}</h1>
     <p>Цена: {{ item.price }}₽</p>
     <p>Размеры: {{ item.size }}</p>

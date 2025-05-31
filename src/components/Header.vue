@@ -4,6 +4,7 @@
   <header>
     <router-link to="/">Главная</router-link>
     <router-link to="/faq">Вопросы</router-link>
+    <router-link to="/admin">Админ Панель</router-link>
   </header>
 </template>
 

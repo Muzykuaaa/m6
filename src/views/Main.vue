@@ -13,9 +13,7 @@ onMounted(()=> {
   getData()
 })
 
-setInterval(() => {
-  count.value++;
-}, 500);
+
 </script>
 <template>
   <section>
