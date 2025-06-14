@@ -29,7 +29,7 @@ onMounted(async () => {
 <template>
   <section v-if="detail">
         <nav>
-            <img :src="detail.img" alt="" />
+            <img :src="detail.src" alt="" />
             <div class="demoFont">
                 <h1>Модель: {{ detail.brand }}</h1>
                 <p>Цена: {{ detail.price }}₽</p>

@@ -2,8 +2,10 @@
 import Card from "../components/Card.vue";
 import { onMounted, ref } from "vue";
 
+import Loader from "../components/Loader.vue" //
 
-let data = ref({});
+
+let data = ref([]);
 
 async function getData() {
   let response = await fetch("https://ae51c2d080f15e19.mokky.dev/product");
@@ -46,6 +48,7 @@ onMounted(()=> {
 </script>
 <template>
   <section>
+    <Loader v-if="data.length == 0" />
     <nav>
       <label>
         <p>Сортировка:</p>
